@@ -1,10 +1,18 @@
+"use client";
+import Header from '@/components/Header/page'
+import Hero from '@/components/Hero/page';
+
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      Hello World!!!!
-    </div>
+    <>
+    <Header/>
+    <Hero /> 
+    <div className='new'>
+        {/* Extra scrollable content */}
+      </div>
+    </>
   )
 }
 
