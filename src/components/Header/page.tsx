@@ -1,17 +1,16 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { AppBar, Toolbar, Button, Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { navItems } from "@/json/page";
 
-const navItems = [
-  { id: "home", label: "Home", href: "#" },
-  { id: "course", label: "Course", href: "#course" },
-  { id: "community", label: "Community", href: "#community" },
-  { id: "faqs", label: "FAQs", href: "#faqs" },
-  { id: "contact", label: "Contact", href: "#contact" },
-];
+// Type for navigation item
+type NavItem = {
+  id: string;
+  label: string;
+  href: string;
+};
 
 const Header: React.FC = () => {
   const [headerClass, setHeaderClass] = useState("header transparent");
@@ -77,19 +76,18 @@ const Header: React.FC = () => {
         {/* Logo */}
         <Box className="logo">
           {// eslint-disable-next-line @next/next/no-img-element
-          <img src="/Images/Logo.avif" alt="MyLogo" />}
+            <img src="/Images/Logo.avif" alt="MyLogo" />}
         </Box>
 
         {/* Desktop Navigation */}
         <Box className="navbar">
-          {navItems.map((item) => (
+          {navItems.map((item: NavItem) => (
             <Button
               key={item.id}
               id={item.id}
               href={item.href}
-              className={`nav-button ${
-                item.id === "contact" ? "contact-btn" : ""
-              }`}
+              className={`nav-button ${item.id === "contact" ? "contact-btn" : ""
+                }`}
             >
               {item.label}
             </Button>
@@ -110,8 +108,8 @@ const Header: React.FC = () => {
       {/* Mobile Dropdown Menu */}
       <Box className={`mobile-dropdown ${menuOpen ? "open" : ""}`}>
         {navItems
-          .filter((item) => item.id !== "contact")
-          .map((item) => (
+          .filter((item: NavItem) => item.id !== "contact")
+          .map((item: NavItem) => (
             <Button
               key={item.id}
               href={item.href}

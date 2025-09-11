@@ -6,14 +6,14 @@ import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined
 const Hero: React.FC = () => {
   return (
     <section id="hero-container" className="hero-container">
-      <div className="hero" id="hero">
+      <Box className="hero" id="hero">
         {/* Background Video */}
         <video autoPlay loop muted playsInline>
           <source src="/Videos/Hero.mp4" type="video/mp4" />
         </video>
 
         {/* Hero Content */}
-        <Box className="hero-content">
+        <Box className="hero-content new-section plr-50">
           <Box>
             <Typography variant="h1">
               Launch Your Data Science Career in 6 Months:{" "}
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             </Box>
           </Box>
         </Box>
-      </div>
+      </Box>
     </section>
   );
 };
