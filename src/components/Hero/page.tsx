@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         </video>
 
         {/* Hero Content */}
-        <Box className="hero-content new-section">
+        <Box className="hero-content new-section plr-50">
           <Box>
             <Typography variant="h1">
               Launch Your Data Science Career in 6 Months:{" "}
