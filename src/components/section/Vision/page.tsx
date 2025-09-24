@@ -1,47 +1,29 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
-import { LinearProgress, Box, Typography } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { visionData } from "@/json/page";
+import ScrollProgress from "@/components/common/ScrollProgress/page";
 
-const SectionWithProgress: React.FC = () => {
-  const [progress, setProgress] = useState(0);
-  const sectionRef = useRef<HTMLBRElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY;
-      const sectionHeight = sectionRef.current.offsetHeight;
-      const scrollY = window.scrollY;
-
-      const scrollPosition = scrollY - sectionTop + window.innerHeight;
-      const progressValue = Math.min(
-        100,
-        Math.max(0, (scrollPosition / sectionHeight) * 100)
-      );
-
-      setProgress(progressValue);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const Vision: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
 
   return (
     <section id="scroll-section" ref={sectionRef}>
-      {/* Progress Bar */}
-      <Box className="progress-container">
-        <LinearProgress variant="determinate" value={progress} />
-      </Box>
+      {/* Scroll Progress */}
+      <ScrollProgress targetRef={sectionRef} />
 
       {/* Section Content */}
       <Box className="new-section">
         <Box>
           <Typography variant="h5">VISION</Typography>
           <Typography variant="h1">
-            We’re Here to Revolutionize the Learning Experience
+            We’re Here to Revolutionize the  <span className="stroke">
+              Learning
+            </span><br />
+            <span className="stroke">
+              Experience
+            </span>
           </Typography>
         </Box>
 
@@ -66,8 +48,8 @@ const SectionWithProgress: React.FC = () => {
             {/* Right Side: Vision Image */}
             <Grid size={{ xs: 12, lg: 6 }}>
               <Box className="vision-image-box">
-               { // eslint-disable-next-line @next/next/no-img-element
-                <img src="/Images/Vision.avif" alt="vision" />}
+                { // eslint-disable-next-line @next/next/no-img-element
+                  <img src="/Images/Vision.avif" alt="vision" />}
               </Box>
             </Grid>
           </Grid>
@@ -77,4 +59,4 @@ const SectionWithProgress: React.FC = () => {
   );
 };
 
-export default SectionWithProgress;
+export default Vision;

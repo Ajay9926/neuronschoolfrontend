@@ -32,3 +32,26 @@ export const visionData: VisionItem[] = [
       "We foster a strong community of learners, mentors, and innovators to grow together.",
   },
 ];
+
+export const numbersData = [
+  {
+    to: 97,
+    title: "AI Adoption Growth",
+    subtitle: "of organizations are investing in AI initiatives by 2025"
+  },
+  {
+    to: 40,
+    title: "Productivity Boost",
+    subtitle: "average increase in business productivity with AI integration"
+  },
+  {
+    to: 3.5,
+    title: "Productivity Boost",
+    subtitle: "new AI-related jobs projected globally by 2025"
+  },
+  {
+    to: 123,
+    title: "Salary Premium",
+    subtitle: "higher average salary for AI specialists vs a developers"
+  }
+]
