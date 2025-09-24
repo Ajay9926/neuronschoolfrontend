@@ -55,3 +55,34 @@ export const numbersData = [
     subtitle: "higher average salary for AI specialists vs a developers"
   }
 ]
+
+export const whyUsData = {
+  left: [
+    {
+      title: "Cutting-edge Curriculum",
+      description: "Learn the latest in AI, Machine Learning, and Deep Learning from industry experts"
+    },
+    {
+      title: "Hands-on Projects",
+      description: "Build real-world projects using cutting-edge AI technologies and tools"
+    },
+    {
+      title: "1:1 Mentorship",
+      description: "Get personalized guidance from experienced industry professionals"
+    }
+  ],
+  right: [
+    {
+      title: "Career Support",
+      description: "Receive dedicated placement assistance and interview preparation"
+    },
+    {
+      title: "Industry Recognition",
+      description: "Earn a certificate recognized by top tech companies"
+    },
+    {
+      title: "Job-Ready Skills",
+      description: "Develop practical skills that employers are actively seeking"
+    }
+  ]
+};

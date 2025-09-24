@@ -10,7 +10,7 @@ const OurNumbers = () => {
             <Grid container spacing={5}>
                 {numbersData.map((item, index) => (
                     // Single number/stat card
-                    <Grid size={{ xs: 12, sm: 6, lg: 3 }} key={index}>
+                    <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                         <Box>
                             <Box display="flex" alignItems="baseline">
                                 {/* Animated count */}
