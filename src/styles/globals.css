@@ -72,6 +72,10 @@ p {
   margin-top: 15px !important;
 }
 
+.mt-50 {
+  margin-top: 50px !important;
+}
+
 .p-0 {
   padding: 0px !important;
 }
@@ -261,6 +265,18 @@ p {
   animation: floatUpDown 2s ease-in-out infinite;
 }
 
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* ---------------- OUR NUMBERS ---------------- */
 .count-up-text {
   font-size: 60px;
@@ -277,16 +293,52 @@ p {
   margin-left: 5px !important;
 }
 
-@keyframes floatUpDown {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+/* ---------------- WHYUS ---------------- */
+.center-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image-box img {
+  width: 68%;
+  object-fit: cover;
+  animation: floatUpDown 0.9s ease-in-out infinite;
+}
+
+.whyus-box {
+  padding: 25px 31px !important;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.shift-right {
+  position: relative;
+  right: -80px;
+  text-align: end;
+}
+
+.shift-left {
+  position: relative;
+  left: -80px;
+  text-align: start;
+}
+
+.shift-center-ri {
+  position: relative;
+  right: -30px;
+  text-align: end;
+}
+
+.shift-center-le {
+  position: relative;
+  left: -30px;
+  text-align: start;
 }
 
 /* ---------------- Responsive ---------------- */
@@ -313,7 +365,7 @@ p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 32px !important;
+    font-size: 27px !important;
   }
 
   h6 {
@@ -367,6 +419,26 @@ p {
     border-bottom: 1px solid var(--grey) !important;
     justify-content: flex-start !important;
     border-radius: 0px !important;
+  }
+
+  .shift-right {
+    right: 0px;
+    text-align: center;
+  }
+
+  .shift-left {
+    left: 0px;
+    text-align: center;
+  }
+
+  .shift-center-ri {
+    right: 0px;
+    text-align: center;
+  }
+
+  .shift-center-le {
+    left: 0px;
+    text-align: center;
   }
 }
 

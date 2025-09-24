@@ -18,10 +18,7 @@ const Vision: React.FC = () => {
         <Box>
           <Typography variant="h5">VISION</Typography>
           <Typography variant="h1">
-            We’re Here to Revolutionize the  <span className="stroke">
-              Learning
-            </span><br />
-            <span className="stroke">
+            We’re Here to Revolutionize the  Learning <span className="stroke">
               Experience
             </span>
           </Typography>
@@ -49,7 +46,7 @@ const Vision: React.FC = () => {
             <Grid size={{ xs: 12, lg: 6 }}>
               <Box className="vision-image-box">
                 { // eslint-disable-next-line @next/next/no-img-element
-                  <img src="/Images/Vision.avif" alt="vision" />}
+                  <img src="/Images/Vision.avif" alt="Vision" />}
               </Box>
             </Grid>
           </Grid>
