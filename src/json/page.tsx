@@ -1,3 +1,9 @@
+import WorkOutlinedIcon from '@mui/icons-material/WorkOutlined';
+import HourglassFullOutlinedIcon from '@mui/icons-material/HourglassFullOutlined';
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+import CodeIcon from '@mui/icons-material/Code';
+
 export const navItems: NavItem[] = [
   { id: "home", label: "Home", href: "#" },
   { id: "course", label: "Course", href: "#course" },
@@ -64,7 +70,7 @@ export const whyUsData = {
     },
     {
       title: "Hands-on Projects",
-      description: "Build real-world projects using cutting-edge AI technologies and tools"
+      description: "Build real-world projects using cutting-edge AI technologies & tools"
     },
     {
       title: "1:1 Mentorship",
@@ -86,3 +92,11 @@ export const whyUsData = {
     }
   ]
 };
+
+export const listData = [
+  { text: "Internship Experience", icon: <WorkOutlinedIcon /> },
+  { text: "Full Time/ Hybrid", icon: <HourglassFullOutlinedIcon /> },
+  { text: "12+ Live Projects", icon: <ScreenShareIcon /> },
+  { text: "300+ Hours Live Lectures", icon: <LocalLibraryIcon /> },
+  { text: "120+ Particle Coding Assignments", icon: <CodeIcon /> },
+];

@@ -84,6 +84,10 @@ p {
   padding: 0px 50px !important;
 }
 
+.ml--15 {
+  margin-left: -15px !important;
+}
+
 .stroke {
   color: transparent;
   -webkit-text-stroke: 2px var(--white);
@@ -221,7 +225,7 @@ p {
 }
 
 .MuiLinearProgress-root {
-  height: 5px !important;
+  height: 3px !important;
   border-radius: 2px;
   border: 0.5px solid var(--white);
   background-color: var(--white) !important;
@@ -260,7 +264,6 @@ p {
 }
 
 .vision-image-box img {
-  width: 100%;
   border-radius: 8px;
   animation: floatUpDown 2s ease-in-out infinite;
 }
@@ -341,6 +344,24 @@ p {
   text-align: start;
 }
 
+/* ---------------- AICOHORT ---------------- */
+.ai-section {
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--black) 100%);
+  cursor: grab;
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiAvatar-circular {
+  background-color: var(--primary-light) !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.MuiSvgIcon-fontSizeMedium {
+  font-size: 22px !important;
+}
+
 /* ---------------- Responsive ---------------- */
 @media (min-width: 2500px) {
   .new-section {
@@ -349,6 +370,18 @@ p {
 
   .plr-50 {
     padding: 0px 50px !important;
+  }
+
+  .vision-image-box img {
+    width: 70%;
+  }
+
+  .center-image-box img {
+    width: 55%;
+  }
+
+  .whyus-box {
+    padding: 24px !important;
   }
 }
 
@@ -360,6 +393,14 @@ p {
 
   .new-section {
     padding: 30px 20px !important;
+  }
+
+  .vision-image-box img {
+    width: 100%;
+  }
+
+  .whyus-box {
+    padding: 25px 12px !important;
   }
 }
 
@@ -440,6 +481,10 @@ p {
     left: 0px;
     text-align: center;
   }
+
+  .whyus-box {
+    padding: 25px 31px !important;
+  }
 }
 
 @media (max-width: 425px) {
@@ -449,5 +494,9 @@ p {
 
   .mobile-dropdown {
     top: 55px;
+  }
+
+  .whyus-box {
+    padding: 24px !important;
   }
 }
