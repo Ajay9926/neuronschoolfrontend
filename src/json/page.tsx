@@ -118,7 +118,7 @@ export const courseData = [
     },
     {
       id: 2,
-      title: "Web & Desktop Development",
+      title: "Web Development",
       description: "HTML, CSS, Flask, Tkinter, PyGame. Projects: Blogging platform, 2D animated games, desktop apps.",
       duration: "4 Weeks",
       topics: ["HTML", "CSS", "Flask", "Tkinter", "PyGame"],

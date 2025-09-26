@@ -7,6 +7,8 @@ import Vision from '@/components/section/Vision/page';
 import WhyUS from '@/components/section/WhyUs/page';
 import AiCohort from '@/components/section/AiCohort/page';
 import Course from '@/components/section/Course';
+import Learn from '@/components/section/Learn/page';
+import WhyDifferent from '@/components/section/WhyDifferent/page';
 
 const page = () => {
   return (
@@ -17,7 +19,9 @@ const page = () => {
     <OurNumbers />
     <WhyUS />
     <AiCohort />
-    <Course/>
+    <Course />
+    <Learn />
+    <WhyDifferent />
     </>
   )
 }
