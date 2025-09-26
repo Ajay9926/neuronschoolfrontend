@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export {};
 
 declare global {
@@ -11,5 +13,15 @@ declare global {
     id: number;
     title: string;
     description: string;
+  }
+
+  interface Item {
+    id: number;
+    title: string;
+    description: string;
+    duration: string;
+    topics: string[];
+    projects: string[];
+    icon: ReactNode;
   }
 }

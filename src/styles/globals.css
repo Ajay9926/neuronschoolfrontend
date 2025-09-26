@@ -94,6 +94,10 @@ p {
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
 /* ---------------- HEADER ---------------- */
 .header {
   transition: all 0.3s ease;
@@ -362,6 +366,72 @@ p {
   font-size: 22px !important;
 }
 
+/* ---------------- COURSE ---------------- */
+.marquee-outer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  align-items: stretch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  justify-content: center;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.course-btn {
+  color: var(--white) !important;
+}
+
+.course-btn:hover {
+  background-color: #333;
+}
+
+.marquee-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-inner.active {
+  cursor: grabbing;
+}
+
+.marquee-item {
+  flex: 0 0 calc((100% - 50px) / 3);
+  max-width: calc((100% - 50px) / 3);
+  box-sizing: border-box;
+}
+
+.card-main {
+  background-color: var(--background) !important;
+  border: 1px solid var(--primary);
+  padding:10px 25px!important;
+  min-height: 365; 
+}
+
+.extra-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.extra-icon {
+  font-size: 35px !important;
+  color: var(--primary-light2);
+}
+
 /* ---------------- Responsive ---------------- */
 @media (min-width: 2500px) {
   .new-section {
@@ -485,6 +555,12 @@ p {
   .whyus-box {
     padding: 25px 31px !important;
   }
+
+  .marquee-item {
+    flex: 0 0 calc((100% - 50px) / 2); /* 3 cards visible, minus total gap */
+    max-width: calc((100% - 50px) / 2);
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 425px) {
@@ -498,5 +574,19 @@ p {
 
   .whyus-box {
     padding: 24px !important;
+  }
+
+  .marquee-item {
+    flex: 0 0 calc((100%));
+    max-width: calc((100%));
+    box-sizing: border-box;
+  }
+
+  .marquee-inner {
+    justify-content: flex-start;
+  }
+
+  .card-main {
+    min-height: 390px !important; 
   }
 }
