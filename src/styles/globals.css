@@ -94,6 +94,10 @@ p {
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
 /* ---------------- HEADER ---------------- */
 .header {
   transition: all 0.3s ease;
@@ -405,9 +409,27 @@ p {
 }
 
 .marquee-item {
-  flex: 0 0 calc((100% - 50px) / 3); /* 3 cards visible, minus total gap */
+  flex: 0 0 calc((100% - 50px) / 3);
   max-width: calc((100% - 50px) / 3);
   box-sizing: border-box;
+}
+
+.card-main {
+  background-color: var(--background) !important;
+  border: 1px solid var(--primary);
+  padding:10px 25px!important;
+  min-height: 365; 
+}
+
+.extra-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.extra-icon {
+  font-size: 35px !important;
+  color: var(--primary-light2);
 }
 
 /* ---------------- Responsive ---------------- */
@@ -560,7 +582,11 @@ p {
     box-sizing: border-box;
   }
 
-  .marquee-inner{
+  .marquee-inner {
     justify-content: flex-start;
+  }
+
+  .card-main {
+    min-height: 390px !important; 
   }
 }

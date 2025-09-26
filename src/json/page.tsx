@@ -3,6 +3,11 @@ import HourglassFullOutlinedIcon from '@mui/icons-material/HourglassFullOutlined
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import CodeIcon from '@mui/icons-material/Code';
+import ScreenshotMonitorOutlinedIcon from '@mui/icons-material/ScreenshotMonitorOutlined';
+import PollOutlinedIcon from '@mui/icons-material/PollOutlined';
+import PrecisionManufacturingOutlinedIcon from '@mui/icons-material/PrecisionManufacturingOutlined';
+import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 
 export const navItems: NavItem[] = [
   { id: "home", label: "Home", href: "#" },
@@ -100,3 +105,60 @@ export const listData = [
   { text: "300+ Hours Live Lectures", icon: <LocalLibraryIcon /> },
   { text: "120+ Particle Coding Assignments", icon: <CodeIcon /> },
 ];
+
+export const courseData = [
+    {
+      id: 1,
+      title: "Python Programming",
+      description: "Python basics, OOPs, external libraries, and projects like a temperature converter and JARVIS virtual assistant.",
+      duration: "4 Weeks",
+      topics: ["Python basics", "Object-Oriented Programming", "External libraries", "Some Topic"],
+      projects: ["Temperature Converter", "JARVIS Virtual Assistant"],
+      icon: <CodeIcon />,
+    },
+    {
+      id: 2,
+      title: "Web & Desktop Development",
+      description: "HTML, CSS, Flask, Tkinter, PyGame. Projects: Blogging platform, 2D animated games, desktop apps.",
+      duration: "4 Weeks",
+      topics: ["HTML", "CSS", "Flask", "Tkinter", "PyGame"],
+      projects: ["Blogging Platform","2D Animated Games","Desktop Apps"],
+      icon: <ScreenshotMonitorOutlinedIcon />,
+    },
+    {
+      id: 3,
+      title: "Data Analytics",
+      description: "Excel, SQL, PowerBI, data preprocessing. Projects: Financial reports, interactive dashboards, capstone analysis.",
+      duration: "4 Weeks",
+      topics: ["Excel", "SQL", "PowerBI", "Data Preprocessing"],
+      projects: ["Financial Reports","Interactive Dashboards","Capstone Analysis "],
+      icon: <PollOutlinedIcon />,
+    },
+    {
+      id: 4,
+      title: "Machine Learning",
+      description: "Regression and classification algorithms, model evaluation. Projects : Spam detection, house price prediction.",
+      duration: "4 Weeks",
+      topics: ["Regression Algorithms", "Classification Algorithms", "Model Evaluation",],
+      projects: ["Financial Reports","Interactive Dashboards","Capstone Analysis "],
+      icon: <PrecisionManufacturingOutlinedIcon />,
+    },
+    {
+      id: 5,
+      title: "Deep Learning",
+      description: "Neural Networks, CNNs, RNNs, and Transfer Learning with hands-on projects like Image Classification and Sentiment Analysis.",
+      duration: "4 Weeks",
+      topics: ["CNNs and RNNs","Backpropagation","Deep Learning Frameworks"],
+      projects: ["Image Classifier using CNNs","Sentiment Analysis with RNNs"],
+      icon: <PsychologyOutlinedIcon />,
+    },
+    {
+      id: 6,
+      title: "Generative AI",
+      description: "Learn about GANs, LLMs, and text-to-image generation. Explore creative applications of AI with hands-on projects.",
+      duration: "4 Weeks",
+      topics: ["GANs", "VAEs", "Diffusion Models",],
+      projects: ["Text-to-Image Generator","AI-Powered Chatbot"],
+      icon: <CastForEducationOutlinedIcon />,
+    },
+  ];

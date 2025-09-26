@@ -9,7 +9,6 @@ import TextCursor from '@/components/common/TextCursor';
 import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import { listData } from '@/json/page';
 
-
 const AiCohort = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -57,7 +56,7 @@ const AiCohort = () => {
                   <ListItemAvatar>
                     <Avatar>{item.icon}</Avatar>
                   </ListItemAvatar>
-                  <ListItemText primary={item.text} className="text" />
+                  <ListItemText primary={item.text} className="text"/>
                 </ListItem>
               ))}
             </List>
