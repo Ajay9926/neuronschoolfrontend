@@ -438,6 +438,53 @@ p {
   height: auto;
 }
 
+/* ---------------- CONTACT ---------------- */
+.contact-form-wrapper{
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form-wrapper {
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form-wrapper .MuiInputBase-input {
+  padding: 12px 12px;  
+}
+
+.contact-form-wrapper .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary-light);  
+}
+
+.MuiInputBase-input {
+  color: black !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.MuiCheckbox-root {
+  color: var(--primary-light) !important;
+}
+
+.MuiInputLabel-root {
+  color: black !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--primary-light) !important;
+}
+
+.MuiOutlinedInput-root {
+  & fieldset {
+    border-color: var(--black); 
+  }
+}
+
+.red-label, .MuiFormControlLabel-label {
+line-height: 17px !important;
+color: var(--black);
+}
+
 /* ---------------- Responsive ---------------- */
 @media (min-width: 2500px) {
   .new-section {
