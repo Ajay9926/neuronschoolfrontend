@@ -25,3 +25,16 @@ declare global {
     icon: ReactNode;
   }
 }
+
+export interface FormData {
+  fullName: string;
+  email: string;
+  phone: string;
+  college: string;
+  address: string;
+  interested: {
+    community: boolean;
+    aiCohort: boolean;
+    career: boolean;
+  };
+}
