@@ -24,6 +24,12 @@ declare global {
     projects: string[];
     icon: ReactNode;
   }
+
+  interface FaqItem {
+    id: string;
+    question: string;
+    answer: string;
+  }
 }
 
 export interface FormData {
