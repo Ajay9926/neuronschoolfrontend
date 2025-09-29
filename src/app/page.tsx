@@ -10,6 +10,7 @@ import Course from '@/components/section/Course';
 import Learn from '@/components/section/Learn/page';
 import WhyDifferent from '@/components/section/WhyDifferent/page';
 import ContactUs from '@/components/section/ContactUs/page';
+import Faq from '@/components/section/Faq/page';
 
 const page = () => {
   return (
@@ -24,6 +25,7 @@ const page = () => {
     <Learn />
     <WhyDifferent />
     <ContactUs />
+    <Faq />
     </>
   )
 }

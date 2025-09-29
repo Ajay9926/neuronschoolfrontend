@@ -485,6 +485,17 @@ line-height: 17px !important;
 color: var(--black);
 }
 
+/* ---------------- FAQ ---------------- */
+.custom-accordion-summary .MuiTypography-h4 {
+  color: var(--black) !important;
+  font-size: 16px !important;
+}
+
+.Mui-expanded{
+  min-height: 20px !important;
+  margin: 15px 0 0 0 !important;
+}
+
 /* ---------------- Responsive ---------------- */
 @media (min-width: 2500px) {
   .new-section {

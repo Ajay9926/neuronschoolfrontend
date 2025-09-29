@@ -107,58 +107,116 @@ export const listData = [
 ];
 
 export const courseData = [
-    {
-      id: 1,
-      title: "Python Programming",
-      description: "Python basics, OOPs, external libraries, and projects like a temperature converter and JARVIS virtual assistant.",
-      duration: "4 Weeks",
-      topics: ["Python basics", "Object-Oriented Programming", "External libraries", "Some Topic"],
-      projects: ["Temperature Converter", "JARVIS Virtual Assistant"],
-      icon: <CodeIcon />,
-    },
-    {
-      id: 2,
-      title: "Web Development",
-      description: "HTML, CSS, Flask, Tkinter, PyGame. Projects: Blogging platform, 2D animated games, desktop apps.",
-      duration: "4 Weeks",
-      topics: ["HTML", "CSS", "Flask", "Tkinter", "PyGame"],
-      projects: ["Blogging Platform","2D Animated Games","Desktop Apps"],
-      icon: <ScreenshotMonitorOutlinedIcon />,
-    },
-    {
-      id: 3,
-      title: "Data Analytics",
-      description: "Excel, SQL, PowerBI, data preprocessing. Projects: Financial reports, interactive dashboards, capstone analysis.",
-      duration: "4 Weeks",
-      topics: ["Excel", "SQL", "PowerBI", "Data Preprocessing"],
-      projects: ["Financial Reports","Interactive Dashboards","Capstone Analysis "],
-      icon: <PollOutlinedIcon />,
-    },
-    {
-      id: 4,
-      title: "Machine Learning",
-      description: "Regression and classification algorithms, model evaluation. Projects : Spam detection, house price prediction.",
-      duration: "4 Weeks",
-      topics: ["Regression Algorithms", "Classification Algorithms", "Model Evaluation",],
-      projects: ["Financial Reports","Interactive Dashboards","Capstone Analysis "],
-      icon: <PrecisionManufacturingOutlinedIcon />,
-    },
-    {
-      id: 5,
-      title: "Deep Learning",
-      description: "Neural Networks, CNNs, RNNs, and Transfer Learning with hands-on projects like Image Classification and Sentiment Analysis.",
-      duration: "4 Weeks",
-      topics: ["CNNs and RNNs","Backpropagation","Deep Learning Frameworks"],
-      projects: ["Image Classifier using CNNs","Sentiment Analysis with RNNs"],
-      icon: <PsychologyOutlinedIcon />,
-    },
-    {
-      id: 6,
-      title: "Generative AI",
-      description: "Learn about GANs, LLMs, and text-to-image generation. Explore creative applications of AI with hands-on projects.",
-      duration: "4 Weeks",
-      topics: ["GANs", "VAEs", "Diffusion Models",],
-      projects: ["Text-to-Image Generator","AI-Powered Chatbot"],
-      icon: <CastForEducationOutlinedIcon />,
-    },
-  ];
+  {
+    id: 1,
+    title: "Python Programming",
+    description: "Python basics, OOPs, external libraries, and projects like a temperature converter and JARVIS virtual assistant.",
+    duration: "4 Weeks",
+    topics: ["Python basics", "Object-Oriented Programming", "External libraries", "Some Topic"],
+    projects: ["Temperature Converter", "JARVIS Virtual Assistant"],
+    icon: <CodeIcon />,
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    description: "HTML, CSS, Flask, Tkinter, PyGame. Projects: Blogging platform, 2D animated games, desktop apps.",
+    duration: "4 Weeks",
+    topics: ["HTML", "CSS", "Flask", "Tkinter", "PyGame"],
+    projects: ["Blogging Platform", "2D Animated Games", "Desktop Apps"],
+    icon: <ScreenshotMonitorOutlinedIcon />,
+  },
+  {
+    id: 3,
+    title: "Data Analytics",
+    description: "Excel, SQL, PowerBI, data preprocessing. Projects: Financial reports, interactive dashboards, capstone analysis.",
+    duration: "4 Weeks",
+    topics: ["Excel", "SQL", "PowerBI", "Data Preprocessing"],
+    projects: ["Financial Reports", "Interactive Dashboards", "Capstone Analysis "],
+    icon: <PollOutlinedIcon />,
+  },
+  {
+    id: 4,
+    title: "Machine Learning",
+    description: "Regression and classification algorithms, model evaluation. Projects : Spam detection, house price prediction.",
+    duration: "4 Weeks",
+    topics: ["Regression Algorithms", "Classification Algorithms", "Model Evaluation",],
+    projects: ["Financial Reports", "Interactive Dashboards", "Capstone Analysis "],
+    icon: <PrecisionManufacturingOutlinedIcon />,
+  },
+  {
+    id: 5,
+    title: "Deep Learning",
+    description: "Neural Networks, CNNs, RNNs, and Transfer Learning with hands-on projects like Image Classification and Sentiment Analysis.",
+    duration: "4 Weeks",
+    topics: ["CNNs and RNNs", "Backpropagation", "Deep Learning Frameworks"],
+    projects: ["Image Classifier using CNNs", "Sentiment Analysis with RNNs"],
+    icon: <PsychologyOutlinedIcon />,
+  },
+  {
+    id: 6,
+    title: "Generative AI",
+    description: "Learn about GANs, LLMs, and text-to-image generation. Explore creative applications of AI with hands-on projects.",
+    duration: "4 Weeks",
+    topics: ["GANs", "VAEs", "Diffusion Models",],
+    projects: ["Text-to-Image Generator", "AI-Powered Chatbot"],
+    icon: <CastForEducationOutlinedIcon />,
+  },
+];
+
+export const faqData = [
+  {
+    "id": "panel1",
+    "question": "What is Data Science?",
+    "answer": "Data Science is an interdisciplinary field that combines statistical analysis, programming skills, and domain knowledge to extract meaningful insights from data."
+  },
+  {
+    "id": "panel2",
+    "question": "Do I need prior programming experience to join this Data Science course?",
+    "answer": "No, the program is beginner-friendly and starts with Python basics. Even if you have no prior coding experience, our structured curriculum and expert guidance will help you master AI and ML concepts step by step."
+  },
+  {
+    "id": "panel3",
+    "question": "How is this program different from   Data Science courses?",
+    "answer": "Our program emphasizes hands-on project development and practical learning, ensuring you gain real-world experience and skills directly applicable to industry needs."
+  },
+  {
+    "id": "panel4",
+    "question": "What is the duration and schedule of this Data Science course in Indore?",
+    "answer": "The program runs for 6 months, with a mix of live classes, hands-on assignments, and weekly projects. Classes are scheduled on weekdays, with additional doubt-clearing and practice sessions available on weekends."
+  },
+  {
+    "id": "panel5",
+    "question": "Will I get a certificate after completing your Data Science course?",
+    "answer": "Yes, upon successful completion of the program, you will receive:<br>1. A Certificate of Completion for the course.<br>2. An Internship Certificate for the real-world projects and assignments completed during the program."
+  },
+  {
+    "id": "panel6",
+    "question": "What kind of support will I get for job placements?",
+    "answer": "Our comprehensive placement support includes:<br>1. Resume writing and LinkedIn profile optimization. <br>2. Mock interviews with personalized feedback.<br>3. Access to 1200+ hiring partners and daily job notifications.<br>4. A dedicated placement coach to guide you throughout the process."
+  },
+  {
+    "id": "panel7",
+    "question": "What career opportunities are available after completing the Data Science course?",
+    "answer": "Upon completing our data science course, you can pursue roles such as Data Analyst, Junior Data Scientist, Data Engineer, and Business Intelligence Analyst."
+  },
+  {
+    "id": "panel8",
+    "question": "What are the payment options for the program?",
+    "answer": "We offer flexible payment plans:<br>1. One-time payment: Enjoy additional early bird discounts. <br>2. Installment plans: Pay in easy monthly installments.<br>3. Special discounts are available for early enrollees."
+  },
+  {
+    "id": "panel9",
+    "question": "What kind of projects will I work on?",
+    "answer": "You’ll work on a mix of individual and team projects, including:<br>1. Building AI models for real-world applications.<br>2. Developing games using PyGame.<br>3. Creating dashboards and reports using PowerBI.<br>4. Capstone projects using AI-powered applications and building AI Agents."
+  },
+  {
+    "id": "panel10",
+    "question": "What happens if I miss a class?",
+    "answer": "All live classes are recorded and made available on our learning platform. You can revisit missed sessions at any time and join doubt-clearing sessions for additional support."
+  },
+  {
+    "id": "panel11",
+    "question": "How can I get in touch with mentors or resolve my doubts?",
+    "answer": "You’ll have access to a dedicated doubt-clearing platform where you can post questions and get answers within 12-24 hours. Additionally, you can book 1:1 mentor sessions for personalized guidance."
+  }
+]
