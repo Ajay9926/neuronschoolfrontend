@@ -34,6 +34,12 @@ const Hero: React.FC = () => {
                 variant="contained"
                 endIcon={<ArrowRightAltOutlinedIcon />}
                 className="hero-btn"
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Apply Now
               </Button>

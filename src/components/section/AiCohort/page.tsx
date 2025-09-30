@@ -33,7 +33,6 @@ const AiCohort = () => {
         <Typography variant="h1" sx={{ textAlign: "center" }}>
           Be the founding member of <span className="stroke">AI Cohort</span>
         </Typography>
-
         <Grid container spacing={5} alignItems="center" className="mt-50">
           <Grid size={{ xs: 12, md: 5, lg: 6 }}>
             <Box
@@ -64,6 +63,12 @@ const AiCohort = () => {
               variant="contained"
               endIcon={<ArrowRightAltOutlinedIcon />}
               className="hero-btn"
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Join Now
             </Button>

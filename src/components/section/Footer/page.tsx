@@ -38,7 +38,7 @@ const Footer = () => {
                                 neurons.info.edu@gmail.com
                             </a>
                         </Typography>
-                        <Box display="flex" gap={1}>
+                        <Box display="flex" gap={1} className="ml--10">
                             {socialLinks.map((social) => (
                                 <IconButton
                                     key={social.name}
@@ -74,9 +74,11 @@ const Footer = () => {
                         <Typography variant="h1" className="animated-text stroke">
                             NEURONS
                         </Typography>
-                        <Typography variant="subtitle2" className="text mt-15" style={{textAlign:"center"}}>
-                            
-@Copyright 2024. Neurons School of Innovation and AI. All Rights Reserved.
+                        <Typography variant="subtitle2" className="text mt-15" style={{ textAlign: "center" }}>
+                            @Copyright 2025. Neurons School of Innovation and AI. All Rights Reserved.
+                        </Typography>
+                        <Typography variant="subtitle2" className="text mt-5" style={{ textAlign: "center" }}>
+                            Made with ❤️ by Neurons
                         </Typography>
                     </Grid>
                 </Grid>
