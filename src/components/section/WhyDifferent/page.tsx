@@ -52,7 +52,7 @@ const rows = [
 
 const WhyDifferent: React.FC = () => {
   return (
-    <section id="scroll-section" className="new-section">
+    <section className="new-section scroll-section">
       {/* Section Heading */}
       <Box>
         <Typography variant="h5">WHY WE DIFFERENT</Typography>

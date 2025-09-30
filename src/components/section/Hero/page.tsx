@@ -5,7 +5,7 @@ import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero-container" className="hero-container">
+    <section id="home" className="hero-container">
       <Box className="hero" id="hero">
         {/* Background Video */}
         <video autoPlay loop muted playsInline>

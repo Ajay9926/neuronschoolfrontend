@@ -7,7 +7,7 @@ const WhyUS = () => {
     const sectionRef = useRef<HTMLElement>(null);
     return (
         <>
-            <section ref={sectionRef}>
+            <section id='whyneurons' ref={sectionRef}>
                 {/* Scroll Progress */}
                 <ScrollProgress targetRef={sectionRef} />
                 <Box className="new-section">

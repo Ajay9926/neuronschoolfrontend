@@ -9,7 +9,7 @@ const Vision: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section id="scroll-section" ref={sectionRef}>
+    <section className="scroll-section" ref={sectionRef}>
       {/* Scroll Progress */}
       <ScrollProgress targetRef={sectionRef} />
 

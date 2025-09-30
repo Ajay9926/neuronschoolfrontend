@@ -29,18 +29,21 @@ const Faq: React.FC = () => {
 
   // Generate random icons only on client
   useEffect(() => {
-    const generated = Array.from({ length: 50 }, () => ({
-        left: `${Math.random() * 100}%`,
-        duration: `${5 + Math.random() * 20}s`,
-        delay: `${Math.random() * 15}s`,
-        size: `${20 + Math.random() * 50}px`,
-      }));
-      
+    const isMobile = window.innerWidth <= 768;
+    const count = isMobile ? 20 : 50;
+    const generated = Array.from({ length: count }, () => ({
+      left: `${Math.random() * 100}%`,
+      duration: `${5 + Math.random() * 20}s`,
+      delay: `${Math.random() * 15}s`,
+      size: isMobile 
+        ? `${(20 + Math.random() * 50) / 2}px` 
+        : `${20 + Math.random() * 50}px`,
+    }));
     setIcons(generated);
   }, []);
-
+  
   return (
-    <section ref={sectionRef}>
+    <section id="faq" ref={sectionRef}>
       <ScrollProgress targetRef={sectionRef} />
 
       <Box className="new-section">
@@ -65,7 +68,6 @@ const Faq: React.FC = () => {
 
         {/* FAQ content */}
         <Box>
-          <Typography variant="h5">WHY CHOOSE NEURONS?</Typography>
           <Typography variant="h1">
             Frequently Asked <span className="stroke">Questions</span>
           </Typography>
