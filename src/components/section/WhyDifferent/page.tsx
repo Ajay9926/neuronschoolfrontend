@@ -10,29 +10,23 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
+// Styled TableCell
+const StyledTableCell = styled(TableCell)(() => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.white,
-    color: theme.palette.common.black,
+    backgroundColor: "#000000", 
+    color: "#ffffff",           
     fontWeight: "bold",
     fontSize: "17px",
-    borderBottom: "1px solid black",
     lineHeight: "15px"
   },
   [`&.${tableCellClasses.body}`]: {
+    backgroundColor: "#0b0d16ff", 
+    color: "#f0f0f0",          
     fontSize: "15px",
   },
 }));
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
-  },
-  '&:last-child td, &:last-child th': {
-    border: 0,
-  },
-}));
-
+// Table data creator
 function createData(
   name: string,
   neuronsSchool: string,
@@ -43,7 +37,7 @@ function createData(
   return { name, neuronsSchool, otherAICourses, onlinePlatforms, traditionalInstitutes };
 }
 
-/* Table rows data - Each row represents a feature comparison */
+// Table rows
 const rows = [
   createData('Real-World Projects', "✅", "❌", "❌", "❌"),
   createData('1:1 Expert Mentorship', "✅", "❌", "❌", "✅"),
@@ -85,7 +79,7 @@ const WhyDifferent: React.FC = () => {
             {/* Table Body */}
             <TableBody>
               {rows.map((row, index) => (
-                <StyledTableRow key={index}>
+                <TableRow key={index}>
                   <StyledTableCell component="th" scope="row">
                     {row.name}
                   </StyledTableCell>
@@ -93,7 +87,7 @@ const WhyDifferent: React.FC = () => {
                   <StyledTableCell align="center">{row.otherAICourses}</StyledTableCell>
                   <StyledTableCell align="center">{row.onlinePlatforms}</StyledTableCell>
                   <StyledTableCell align="center">{row.traditionalInstitutes}</StyledTableCell>
-                </StyledTableRow>
+                </TableRow>
               ))}
             </TableBody>
           </Table>

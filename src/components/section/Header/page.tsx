@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { AppBar, Toolbar, Button, Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Handle scroll behavior for header
-  useEffect(() => {
+  useLayoutEffect(() => {
     let lastScrollY = 0;
 
     const handleScroll = () => {
