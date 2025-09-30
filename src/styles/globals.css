@@ -253,6 +253,8 @@ p {
 
 .new-section {
   padding: 50px;
+  position: relative;
+  overflow: hidden; /* hides icons moving outside */
 }
 
 .vision-box {
@@ -417,8 +419,8 @@ p {
 .card-main {
   background-color: var(--background) !important;
   border: 1px solid var(--primary);
-  padding:10px 25px!important;
-  min-height: 383; 
+  padding: 10px 25px !important;
+  min-height: 383;
 }
 
 .extra-box {
@@ -439,27 +441,47 @@ p {
 }
 
 /* ---------------- CONTACT ---------------- */
-.contact-form-wrapper{
-  background-color: var(--white);
+.contact-form-wrapper {
+  position: relative;
   padding: 30px;
-  border-radius: 10px;
+  background: var(--background);
+  border: 3px solid; 
+  border-image-slice: 1;
+  animation: borderMove 3s linear infinite;
+}
+
+@keyframes borderMove {
+  0% {
+    border-image-source: linear-gradient(270deg, var(--primary-light), black);
+  }
+  50% {
+    border-image-source: linear-gradient(450deg, var(--primary-light), black);
+  }
+  100% {
+    border-image-source: linear-gradient(270deg, var(--primary-light), black);
+  }
 }
 
 .contact-form-wrapper {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-form-wrapper .MuiInputBase-input {
-  padding: 12px 12px;  
+  padding: 12px 12px;
 }
 
-.contact-form-wrapper .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--primary-light);  
+.contact-form-wrapper
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline,
+.contact-form-wrapper
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary-light);
 }
 
 .MuiInputBase-input {
-  color: black !important;
-  font-family: 'Poppins', sans-serif;
+  color: var(--white) !important;
+  font-family: "Poppins", sans-serif;
 }
 
 .MuiCheckbox-root {
@@ -467,7 +489,7 @@ p {
 }
 
 .MuiInputLabel-root {
-  color: black !important;
+  color: var(--white) !important;
 }
 
 .MuiInputLabel-root.Mui-focused {
@@ -476,24 +498,55 @@ p {
 
 .MuiOutlinedInput-root {
   & fieldset {
-    border-color: var(--black); 
+    border-color: var(--white);
   }
 }
 
-.red-label, .MuiFormControlLabel-label {
-line-height: 17px !important;
-color: var(--black);
+.red-label,
+.MuiFormControlLabel-label {
+  line-height: 17px !important;
+  color: var(--white);
 }
 
 /* ---------------- FAQ ---------------- */
 .custom-accordion-summary .MuiTypography-h4 {
-  color: var(--black) !important;
   font-size: 16px !important;
 }
 
-.Mui-expanded{
+.custom-accordion {
+  background: color-mix(in srgb, var(--background) 60%, transparent) !important;
+}
+
+.css-1808mag-MuiPaper-root-MuiAccordion-root::before{
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.Mui-expanded {
   min-height: 20px !important;
   margin: 15px 0 0 0 !important;
+}
+
+.icon {
+  position: absolute;
+  opacity: 0;
+  animation-name: floatIcon;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.custom-accordion .MuiSvgIcon-fontSizeMedium{
+  color:var(--primary-light)
+}
+
+@keyframes floatIcon {
+  0% {
+    opacity: 1;
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20vh) rotate(360deg);
+  }
 }
 
 /* ---------------- Responsive ---------------- */
@@ -538,7 +591,7 @@ color: var(--black);
   }
 
   .card-main {
-    min-height: 394px; 
+    min-height: 394px;
   }
 
   .learn-vid {
@@ -629,7 +682,7 @@ color: var(--black);
   }
 
   .marquee-item {
-    flex: 0 0 calc((100% - 50px) / 2); /* 3 cards visible, minus total gap */
+    flex: 0 0 calc((100% - 50px) / 2);
     max-width: calc((100% - 50px) / 2);
     box-sizing: border-box;
   }
@@ -663,6 +716,6 @@ color: var(--black);
   }
 
   .card-main {
-    min-height: 390px !important; 
+    min-height: 390px !important;
   }
 }

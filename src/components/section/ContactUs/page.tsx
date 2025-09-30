@@ -188,7 +188,7 @@ const ContactUs = () => {
                   />
                 </Grid>
                 <Grid size={{ xs: 12 }}>
-                  <Typography variant="subtitle2" style={{ color: "black" }}>
+                  <Typography variant="subtitle2" style={{ color: "white" }}>
                     I&apos;m Interested
                   </Typography>
                   <FormGroup className="red-label mt-5">
