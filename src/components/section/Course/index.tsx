@@ -139,7 +139,7 @@ function Course() {
   }, [isPaused]);
 
   return (
-    <Box className="new-section">
+    <Box id="course" className="new-section">
       {/* Section Header */}
       <Box mb={4}>
         <Typography variant="h5">COURSE CURRICULUM</Typography>

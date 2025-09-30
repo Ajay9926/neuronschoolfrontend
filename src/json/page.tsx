@@ -10,10 +10,10 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 
 export const navItems: NavItem[] = [
-  { id: "home", label: "Home", href: "#" },
+  { id: "home", label: "Home", href: "#home" },
+  { id: "whyneurons", label: "Why Neurons", href: "#whyneurons" },
   { id: "course", label: "Course", href: "#course" },
-  { id: "community", label: "Community", href: "#community" },
-  { id: "faqs", label: "FAQs", href: "#faqs" },
+  { id: "faq", label: "FAQs", href: "#faq" },
   { id: "contact", label: "Contact", href: "#contact" }
 ];
 
@@ -220,3 +220,31 @@ export const faqData = [
     "answer": "You’ll have access to a dedicated doubt-clearing platform where you can post questions and get answers within 12-24 hours. Additionally, you can book 1:1 mentor sessions for personalized guidance."
   }
 ]
+
+export const socialLinks = [
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/neurons.school/",
+    icon: "/Icons/Insta.avif",
+  },
+  {
+    name: "Whatsapp",
+    url: "https://chat.whatsapp.com/EitArDNpXf1E5QfbJ4yyuf",
+    icon: "/Icons/Whatsapp.avif",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/school/neurons-school-of-innovation-ai/",
+    icon: "/Icons/Linkedin.avif",
+  },
+  {
+    name: "Youtube",
+    url: "https://www.youtube.com/@neurons.school",
+    icon: "/Icons/YouTube.avif",
+  },
+  {
+    name: "Twitter",
+    url: "https://x.com/neuronsschool",
+    icon: "/Icons/Twitter.avif",
+  },
+];

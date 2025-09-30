@@ -88,7 +88,7 @@ const ContactUs = () => {
   };
 
   return (
-    <Box className="new-section">
+    <Box className="new-section" id="contact">
       <ToastContainer
         position="bottom-right"
         autoClose={3000}
@@ -117,8 +117,12 @@ const ContactUs = () => {
               height: "100%",
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="Images/Contact.gif" alt="Contact" />
+            { // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src="Images/Contact.gif"
+                alt="Contact"
+                style={{ maxWidth: "100%", height: "auto", display: "block" }}
+              />}
           </Box>
         </Grid>
 

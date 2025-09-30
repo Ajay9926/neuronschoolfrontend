@@ -11,6 +11,7 @@ import Learn from '@/components/section/Learn/page';
 import WhyDifferent from '@/components/section/WhyDifferent/page';
 import ContactUs from '@/components/section/ContactUs/page';
 import Faq from '@/components/section/Faq/page';
+import Footer from '@/components/section/Footer/page';
 
 const page = () => {
   return (
@@ -26,6 +27,7 @@ const page = () => {
     <WhyDifferent />
     <ContactUs />
     <Faq />
+    <Footer />
     </>
   )
 }

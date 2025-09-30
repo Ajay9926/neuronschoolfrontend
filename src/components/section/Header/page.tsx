@@ -45,6 +45,16 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuOpen]);
 
+  // Smooth scroll to section
+  const handleScrollTo = (idOrHref: string) => {
+    const id = idOrHref.startsWith("#") ? idOrHref.slice(1) : idOrHref;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false); // close mobile menu if open
+  };
+
   // Toggle mobile menu
   const toggleMenu = () => {
     const newMenuState = !menuOpen;
@@ -68,15 +78,13 @@ const Header: React.FC = () => {
     }
   };
 
-  const handleItemClick = () => setMenuOpen(false);
-
   return (
     <AppBar position="fixed" className={headerClass}>
       <Toolbar className="header-toolbar">
         {/* Logo */}
         <Box className="logo">
-          {// eslint-disable-next-line @next/next/no-img-element
-            <img src="/Images/Logo.avif" alt="MyLogo" />}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/Images/Logo.avif" alt="MyLogo" />
         </Box>
 
         {/* Desktop Navigation */}
@@ -84,10 +92,10 @@ const Header: React.FC = () => {
           {navItems.map((item: NavItem) => (
             <Button
               key={item.id}
-              id={item.id}
-              href={item.href}
-              className={`nav-button ${item.id === "contact" ? "contact-btn" : ""
-                }`}
+              className={`nav-button ${
+                item.id === "contact" ? "contact-btn" : ""
+              }`}
+              onClick={() => handleScrollTo(item.href)}
             >
               {item.label}
             </Button>
@@ -96,7 +104,10 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation: Contact button + Hamburger */}
         <Box className="mobile-navbar">
-          <Button className="nav-button contact-btn" href="#contact">
+          <Button
+            className="nav-button contact-btn"
+            onClick={() => handleScrollTo("#contact")}
+          >
             Contact
           </Button>
           <IconButton onClick={toggleMenu} color="inherit">
@@ -112,9 +123,8 @@ const Header: React.FC = () => {
           .map((item: NavItem) => (
             <Button
               key={item.id}
-              href={item.href}
               className="mobile-dropdown-item"
-              onClick={handleItemClick}
+              onClick={() => handleScrollTo(item.href)}
             >
               {item.label}
             </Button>
